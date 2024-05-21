@@ -23,7 +23,7 @@ echo "Creating SystemVerilog, HTML, UVM, IP_XACT files..."
 ### Generate synthesizable SystemVerilog
 $CSR_CMD regblock $RDL_INPUT -o $RUN_DIR --top DMAC_CFG --cpuif apb3-flat --peakrdl-cfg peakrdl.toml --addr-width 12
 ### Generate C Header
-# $CSR_CMD c-header $RDL_INPUT -o $RUN_DIR/${RDL_NAME}.h
+# $CSR_CMD c-header $RDL_INPUT -o $RUN_DIR/${RDL_NAME}_CFG.h
 ### Generate HTML
 # $CSR_CMD html $RDL_INPUT -o $RUN_DIR/html_out/
 ### Generate UVM
