@@ -3,8 +3,6 @@
 // Authors:
 // - Jungrae Kim <dale40@skku.edu>
 
-import	DMAC_CFG_pkg::*;
-
 module DMAC_TOP
 (
     input   wire                clk,
@@ -92,11 +90,11 @@ module DMAC_TOP
     wire                        arready_vec[N_CH];
     wire                        rready_vec[N_CH];
 
-    wire    DMAC_CFG__in_t      cfg_hwif_in;
-    wire    DMAC_CFG__out_t     cfg_hwif_out;
+    wire    DMAC_CFG_pkg::DMAC_CFG__in_t        cfg_hwif_in;
+    wire    DMAC_CFG_pkg::DMAC_CFG__out_t       cfg_hwif_out;
 
-    wire    __channel_sfr__in_t   ch_sfr_in[N_CH];
-    wire    __channel_sfr__out_t  ch_sfr_out[N_CH];
+    wire    DMAC_CFG_pkg::__channel_sfr__in_t   ch_sfr_in[N_CH];
+    wire    DMAC_CFG_pkg::__channel_sfr__out_t  ch_sfr_out[N_CH];
     assign  cfg_hwif_in.CH0     = ch_sfr_in[0];
     assign  cfg_hwif_in.CH1     = ch_sfr_in[1];
     assign  cfg_hwif_in.CH2     = ch_sfr_in[2];

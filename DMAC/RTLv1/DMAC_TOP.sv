@@ -3,8 +3,6 @@
 // Authors:
 // - Jungrae Kim <dale40@skku.edu>
 
-import	DMAC_CFG_pkg::*;
-
 module DMAC_TOP
 (
     input   wire                clk,
@@ -61,8 +59,8 @@ module DMAC_TOP
     output  wire                rready_o
 );
 
-    wire    DMAC_CFG__in_t    cfg_hwif_in;
-    wire    DMAC_CFG__out_t   cfg_hwif_out;
+    wire    DMAC_CFG_pkg::DMAC_CFG__in_t    cfg_hwif_in;
+    wire    DMAC_CFG_pkg::DMAC_CFG__out_t   cfg_hwif_out;
 
     DMAC_CFG u_cfg(
         .clk                    (clk),
